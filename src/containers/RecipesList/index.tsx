@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Spin } from 'antd';
 
 import RecipeCard from './components/RecipeCard'
 
@@ -12,9 +13,11 @@ const RecipesList = () => {
   }
 
   const [recipes, setRecipes] = useState<Recipe[]>([])
+  const [loadingRecipes, setLoadingRecipes] = useState(false)
 
   useEffect(() => {
     const fetchRecipes = async () => {
+      setLoadingRecipes(true)
       const data = await getRecipes()
       if (!data) return
 
@@ -23,18 +26,21 @@ const RecipesList = () => {
     }
 
     fetchRecipes()
+    setLoadingRecipes(false)
   }, [])
 
   return (
     <div className="recipes-list">
       <h1>Our weekly menu</h1>
 
-      <div className="recipes-list__container">
-        {recipes.map(recipe =>
-          <RecipeCard
-            key={recipe.title}
-            recipe={recipe} />)}
-      </div>
+      {loadingRecipes ? <div className="recipes-list__loading-container"><Spin size="large"/></div> :
+        <div className="recipes-list__container">
+          {recipes.map(recipe =>
+            <RecipeCard
+              key={recipe.title}
+              recipe={recipe} />)}
+        </div>
+      }
     </div>
   )
 }

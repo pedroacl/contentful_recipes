@@ -18,6 +18,14 @@
   background-color: white;
 }
 
+.recipe-info__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  min-width: 100vh;
+}
+
 .recipe-info__photo {
   background-size: cover;
   background-position: center;

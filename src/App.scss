@@ -1,7 +1,12 @@
 @import "styles/breakpoints";
 @import "styles/colors";
 
+@import '~antd/dist/antd.css';
+
 .App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -32,6 +37,10 @@
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 16px;
   align-items: center;
+
+  p {
+    margin: 0;
+  }
 }
 
 .header-container {
@@ -58,7 +67,6 @@
   align-items: center;
   min-height: 100px;
   background-color: white;
-  margin-top: 32px;
 }
 
 .main-container {
@@ -68,6 +76,9 @@
   padding-top: 70px;
   padding-left: 16px;
   padding-right: 16px;
+  background-color: #F6F6F6;
+  margin-top: 70px;
+  padding: 32px 0;
 
   @media (min-width: $minMd) {
     padding-left: 0;

@@ -9,7 +9,7 @@ type Props = {
 const Button: React.FC<Props> = (props) => {
   const { label } = props
 
-  return <div className="button">{label}</div>
+  return <button className="button">{label}</button>
 }
 
 export default Button

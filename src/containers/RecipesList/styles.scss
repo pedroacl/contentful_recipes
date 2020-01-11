@@ -2,6 +2,7 @@
 
 .recipes-list__container {
   display: grid;
+  justify-content: center;
   grid-template-columns: minmax(300px, auto);
   grid-row-gap: 20px;
 
@@ -22,4 +23,10 @@
 .recipes-list h1 {
   font-weight: 400;
   margin-bottom: 32px;
+}
+
+.recipes-list__loading-container {
+  display: flex;
+  min-height: 500px;
+  align-items: center
 }

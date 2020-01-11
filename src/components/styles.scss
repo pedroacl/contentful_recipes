@@ -4,6 +4,13 @@
   padding: 16px 32px;
   background-color: $darkGreen;
   border-radius: 4px;
+  border: none;
+  transition: background-color .5s;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $lightGreen;
+  }
 }
 
 .tag {
