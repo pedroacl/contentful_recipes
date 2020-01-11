@@ -4,7 +4,7 @@ import RecipeCard from './components/RecipeCard'
 
 import { getRecipes } from 'services/recipes'
 
-import './styles.css'
+import './styles.scss'
 
 const RecipesList = () => {
   type State = {
@@ -16,7 +16,6 @@ const RecipesList = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       const data = await getRecipes()
-
       if (!data) return
 
       const mapped = data.items.map((item: any) => { return { ...item.fields, id: item.sys.id } })

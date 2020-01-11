@@ -10,7 +10,7 @@ import RecipeDetails from 'containers/RecipeDetails';
 import Button from 'components/Button'
 
 import 'normalize.css';
-import './App.css';
+import './App.scss';
 
 const App: React.FC = () => {
   return (

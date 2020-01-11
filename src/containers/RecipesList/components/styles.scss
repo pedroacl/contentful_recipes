@@ -1,0 +1,32 @@
+.recipe-card {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.recipe-card__photo {
+  max-height: 300px;
+}
+
+.recipe-card__title {
+  text-align: start;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .5s;
+}
+
+.recipe-card__photo {
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 16px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.recipe-card__title:hover {
+  color: #28b88d;
+}

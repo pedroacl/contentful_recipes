@@ -5,7 +5,7 @@ import TagsList from './components/TagsList'
 
 import { getRecipe } from 'services/recipes'
 
-import './styles.css'
+import './styles.scss'
 
 const RecipeDetails = () => {
   const [recipe, setRecipe] = useState<Recipe>()

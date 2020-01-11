@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-import './styles.css'
+import './styles.scss'
 
 type Props = {
   recipe: Recipe
@@ -18,14 +18,13 @@ const RecipeCard: React.FC<Props> = (props) => {
 
   return (
     <div className="recipe-card">
-      <img
+      <div
         className="recipe-card__photo"
         onClick={handleOnClick}
-        src={recipe.photo.fields.file.url}
-        alt={recipe.photo.fields.title} />
+        style={{ backgroundImage: `url(${recipe.photo.fields.file.url})` }} />
 
-      <div className="recipe-card__title">
-      <p className="">{recipe.title}</p>
+      <div className="recipe-card__title" onClick={handleOnClick}>
+        <p className="">{recipe.title}</p>
       </div>
     </div>
   )

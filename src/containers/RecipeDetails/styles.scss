@@ -1,4 +1,3 @@
-
 .recipe-info__container {
   margin-top: 32px;
   text-align: start;
@@ -22,9 +21,13 @@
 .recipe-info__photo {
   background-size: cover;
   background-position: center;
-  height: 500px;
+  height: 300px;
   width: 100%;
   margin-bottom: 32px;
+
+  @media (min-width: 1240px) {
+    height: 500px;
+  }
 }
 
 .recipe-info__body {
