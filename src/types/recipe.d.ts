@@ -5,4 +5,5 @@ type Recipe = {
   calories: number
   description: number
   chef: any
+  tags: any[]
 }

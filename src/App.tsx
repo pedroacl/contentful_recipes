@@ -22,7 +22,7 @@ const App: React.FC = () => {
 
             <div className="App-header__session-links">
               <p>Login</p>
-              <Button />
+              <Button label="Sign up"/>
             </div>
           </div>
         </header>
@@ -37,6 +37,8 @@ const App: React.FC = () => {
             </Route>
           </Switch>
         </main>
+
+        <footer className="App-footer">Footer</footer>
       </div>
     </Router>
   );
