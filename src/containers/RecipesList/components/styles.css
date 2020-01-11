@@ -1,0 +1,10 @@
+.recipe-card {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.recipe-card__photo {
+  max-width: 400px;
+  margin-bottom: 16px;
+}
