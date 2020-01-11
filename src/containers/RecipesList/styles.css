@@ -1,12 +1,25 @@
-.container {
+.recipes-list__container {
+  display: grid;
+  grid-template-columns: 400px;
+  grid-row-gap: 20px;
+}
+
+.recipes-list {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.recipes-list {
-  display: grid;
-  grid-template-columns: 400px 400px;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+.recipes-list h1 {
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1240px) {
+  .recipes-list__container {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+  }
 }

@@ -2,9 +2,15 @@
   background-color: white;
   border-radius: 4px;
   overflow: hidden;
+  max-width: 400px;
+  cursor: pointer;
 }
 
 .recipe-card__photo {
-  max-width: 400px;
-  margin-bottom: 16px;
+  max-height: 300px;
+}
+
+.recipe-card__title {
+  text-align: start;
+  padding: 0 16px;
 }

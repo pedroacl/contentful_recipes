@@ -27,10 +27,10 @@ const RecipesList = () => {
   }, [])
 
   return (
-    <div className="container">
+    <div className="recipes-list">
       <h1>Our weekly menu</h1>
 
-      <div className="recipes-list">
+      <div className="recipes-list__container">
         {recipes.map(recipe =>
           <RecipeCard
             key={recipe.title}

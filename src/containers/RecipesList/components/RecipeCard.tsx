@@ -13,7 +13,6 @@ const RecipeCard: React.FC<Props> = (props) => {
   const history = useHistory()
 
   const handleOnClick = () => {
-
     history.push(`recipes/${recipe.id}`)
   }
 
@@ -25,8 +24,8 @@ const RecipeCard: React.FC<Props> = (props) => {
         src={recipe.photo.fields.file.url}
         alt={recipe.photo.fields.title} />
 
-      <div>
-        <div>{recipe.title}</div>
+      <div className="recipe-card__title">
+      <p className="">{recipe.title}</p>
       </div>
     </div>
   )

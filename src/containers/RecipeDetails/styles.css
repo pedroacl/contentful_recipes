@@ -1,9 +1,17 @@
-.recipe-details {
+
+.recipe-info__container {
+  margin-top: 32px;
+  text-align: start;
+}
+
+.recipe-info__back-btn {
+  text-decoration: none;
+  color: black;
+}
+
+.recipe-info {
   display: grid;
-  grid-template-columns: 60vw 30vw;
-  grid-template-areas:
-    "photo       photo"
-    "description details";
+  grid-template-columns: 90vw;
   justify-content: center;
   border-radius: 4px;
   overflow: hidden;
@@ -11,22 +19,26 @@
   background-color: white;
 }
 
-.recipe-details__photo {
-  grid-area: photo;
+.recipe-info__photo {
   background-size: cover;
+  background-position: center;
   height: 500px;
   width: 100%;
   margin-bottom: 32px;
 }
 
-.recipe-details__description {
+.recipe-info__body {
   padding: 0 32px;
-  grid-area: description;
   justify-content: start;
   text-align: start;
 }
 
-.recipe-details__details {
-  padding: 0 32px;
-  grid-area: details;
+.recipe-info__description {
+  padding-bottom: 32px;
+  border-bottom: 1px solid grey;
+  margin-bottom: 32px;
+}
+
+.recipe-info__chef-name {
+  color: #2a5347;
 }

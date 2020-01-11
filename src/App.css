@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .App {
   text-align: center;
 }
@@ -24,6 +19,14 @@
   background-color: white;
   min-height: 70px;
   justify-content: center;
+  font-size: 16px;
+}
+
+.App-header__session-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 16px;
+  align-items: center;
 }
 
 .header-container {
@@ -36,20 +39,16 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #91E7CD;
+}
+
+.App-header__home-link {
+  text-decoration: none;
+  color: black;
 }
 
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
