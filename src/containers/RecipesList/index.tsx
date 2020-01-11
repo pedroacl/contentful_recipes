@@ -3,7 +3,7 @@ import { Spin } from 'antd';
 
 import RecipeCard from './components/RecipeCard'
 
-import { getRecipes } from 'services/recipes'
+import { getRecipes } from 'services'
 
 import './styles.scss'
 

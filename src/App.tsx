@@ -8,6 +8,8 @@ import {
 import RecipesList from 'containers/RecipesList';
 import RecipeDetails from 'containers/RecipeDetails';
 import Button from 'components/Button'
+import Header from 'components/Header'
+import Footer from 'components/Footer'
 
 import 'normalize.css';
 import './App.scss';
@@ -16,16 +18,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <div className="header-container">
-            <a className="App-header__home-link" href="/">Marley Spoon</a>
-
-            <div className="App-header__session-links">
-              <p>Login</p>
-              <Button label="Sign up"/>
-            </div>
-          </div>
-        </header>
+        <Header />
 
         <main className="main-container">
           <Switch>
@@ -38,7 +31,7 @@ const App: React.FC = () => {
           </Switch>
         </main>
 
-        <footer className="App-footer">Footer</footer>
+        <Footer />
       </div>
     </Router>
   );

@@ -4,6 +4,10 @@
   margin-top: 32px;
   text-align: start;
   padding: $mobilePadding;
+
+  @media (min-width: $minMd) {
+    width: 80vw;
+  }
 }
 
 .recipe-info__back-btn {

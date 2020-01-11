@@ -4,7 +4,7 @@ import { Spin } from 'antd';
 
 import TagsList from './components/TagsList'
 
-import { getRecipe } from 'services/recipes'
+import { getRecipe } from 'services'
 
 import './styles.scss'
 
