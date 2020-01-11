@@ -1,0 +1,32 @@
+.recipe-details {
+  display: grid;
+  grid-template-columns: 60vw 30vw;
+  grid-template-areas:
+    "photo       photo"
+    "description details";
+  justify-content: center;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 32px;
+  background-color: white;
+}
+
+.recipe-details__photo {
+  grid-area: photo;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.recipe-details__description {
+  padding: 0 32px;
+  grid-area: description;
+  justify-content: start;
+  text-align: start;
+}
+
+.recipe-details__details {
+  padding: 0 32px;
+  grid-area: details;
+}

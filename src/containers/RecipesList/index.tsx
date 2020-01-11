@@ -19,9 +19,8 @@ const RecipesList = () => {
 
       if (!data) return
 
-      const mapped = data.items.map((item: any) => item.fields)
+      const mapped = data.items.map((item: any) => { return { ...item.fields, id: item.sys.id } })
       setRecipes(mapped)
-      console.log(mapped)
     }
 
     fetchRecipes()
@@ -32,7 +31,10 @@ const RecipesList = () => {
       <h1>Our weekly menu</h1>
 
       <div className="recipes-list">
-        {recipes.map(recipe => <RecipeCard key={recipe.title} recipe={recipe} />)}
+        {recipes.map(recipe =>
+          <RecipeCard
+            key={recipe.title}
+            recipe={recipe} />)}
       </div>
     </div>
   )

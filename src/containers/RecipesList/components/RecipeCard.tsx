@@ -1,4 +1,6 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
+
 import './styles.css'
 
 type Props = {
@@ -8,9 +10,20 @@ type Props = {
 const RecipeCard: React.FC<Props> = (props) => {
   const { recipe } = props
 
+  const history = useHistory()
+
+  const handleOnClick = () => {
+
+    history.push(`recipes/${recipe.id}`)
+  }
+
   return (
     <div className="recipe-card">
-      <img className="recipe-card__photo" src={recipe.photo.fields.file.url} alt={recipe.photo.fields.title}/>
+      <img
+        className="recipe-card__photo"
+        onClick={handleOnClick}
+        src={recipe.photo.fields.file.url}
+        alt={recipe.photo.fields.title} />
 
       <div>
         <div>{recipe.title}</div>

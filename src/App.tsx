@@ -1,31 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 
-import './App.css';
 import RecipesList from './containers/RecipesList';
+import RecipeDetails from 'containers/RecipeDetails';
+
+import './App.css';
 
 const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
+          <div className="header-container">
+            <p>Marley Spoon</p>
+            <p>Login</p>
+          </div>
         </header>
 
-        <main>
+        <main className="main-container">
           <Switch>
+            <Route path="/recipes/:id">
+              <RecipeDetails />
+            </Route>
             <Route path="/">
               <RecipesList />
-            </Route>
-            <Route path="/users">
-              Here
             </Route>
           </Switch>
         </main>

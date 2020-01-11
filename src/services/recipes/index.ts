@@ -16,3 +16,4 @@ const client = contentful.createClient({
 
 export const getRecipes = () => client.getEntries({content_type: 'recipe'})
 
+export const getRecipe = (id: string) => client.getEntry(id)
