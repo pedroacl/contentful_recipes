@@ -27,9 +27,14 @@
   display: flex;
   align-items: center;
   background-color: white;
-  min-height: 70px;
+  height: 70px;
   justify-content: center;
-  font-size: 16px;
+  font-size: 12px;
+  padding: 10px 0;
+
+  @media (min-width: $minMd) {
+    font-size: 16px;
+  }
 }
 
 .App-header__session-links {
@@ -74,8 +79,6 @@
   flex-direction: column;
   align-items: center;
   padding-top: 70px;
-  padding-left: 16px;
-  padding-right: 16px;
   background-color: #F6F6F6;
   margin-top: 70px;
   padding: 32px 0;
