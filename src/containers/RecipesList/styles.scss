@@ -19,6 +19,7 @@
   flex-direction: column;
   align-items: center;
   padding: $mobilePadding;
+  margin-top: 32px;
 
   @media (min-width: $minMd) {
     padding: 0;
