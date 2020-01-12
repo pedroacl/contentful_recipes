@@ -11,7 +11,9 @@ type Props = {
 const TagsList: React.FC<Props> = (props) => {
   const { tags } = props
 
-  return <div className="tags-list">{tags.map(tag => <Tag label={tag.fields.name} />)}</div>
+  return <div className="tags-list">{tags.map(tag =>
+    <Tag label={tag.fields.name} />
+  )}</div>
 }
 
 export default TagsList

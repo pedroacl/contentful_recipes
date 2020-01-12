@@ -17,7 +17,7 @@ const Header = () => {
 
         <ul className="header-container__links">
           <li className="header-container__link">
-            <a href="#">Login</a>
+            <a href="/#">Login</a>
           </li>
           <li>
             <Button label="Sign up"/>

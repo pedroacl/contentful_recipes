@@ -7,7 +7,6 @@ import {
 
 import RecipesList from 'containers/RecipesList';
 import RecipeDetails from 'containers/RecipeDetails';
-import Button from 'components/Button'
 import Header from 'components/Header'
 import Footer from 'components/Footer'
 

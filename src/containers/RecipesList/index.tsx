@@ -16,18 +16,21 @@ const RecipesList = () => {
 
   useEffect(() => {
     const fetchRecipes = async () => {
-      send(Events.LOAD)
-
       try {
         const data = await getRecipes()
-        const mapped = data.items.map((item: any) => { return { ...item.fields, id: item.sys.id } })
-        setRecipes(mapped)
+
+        const recipesWithId = data.items.map((item: any) => {
+          return { ...item.fields, id: item.sys.id }
+        })
+
+        setRecipes(recipesWithId)
         send(Events.LOADED)
       } catch (error) {
         send(Events.ERROR)
       }
     }
 
+    send(Events.LOAD)
     fetchRecipes()
     send(Events.LOADED)
   }, [send])

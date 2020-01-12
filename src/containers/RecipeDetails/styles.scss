@@ -1,4 +1,4 @@
-@import 'styles/breakpoints';
+@import "styles/breakpoints";
 
 .recipe-info__container {
   margin-top: 32px;
@@ -22,7 +22,7 @@
   justify-content: center;
   border-radius: 4px;
   overflow: hidden;
-  margin-top: 32px;
+  margin: 32px 0;
   background-color: white;
 }
 
@@ -53,11 +53,20 @@
 }
 
 .recipe-info__description {
-  padding-bottom: 32px;
-  border-bottom: 1px solid grey;
-  margin-bottom: 32px;
+  margin-bottom: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    margin: 32px 0;
+    border-bottom: 1px solid grey;
+  }
 }
 
 .recipe-info__chef-name {
   color: #2a5347;
+}
+
+.recipe-info__tag {
+  margin-right: 16px;
 }

@@ -7,7 +7,7 @@ type Props = {
 const Tag: React.FC<Props> = (props) => {
   const { label } = props
 
-  return <div className="tag">
+  return <div className='tag'>
     {label}
   </div>
 }

@@ -21,8 +21,6 @@ const RecipeDetails = () => {
       return
     }
 
-    send(Events.LOAD)
-
     const fetchRecipe = async () => {
       try {
         const data = await getRecipe(id)
@@ -33,6 +31,7 @@ const RecipeDetails = () => {
       }
     }
 
+    send(Events.LOAD)
     fetchRecipe()
   }, [id, send, setRecipe])
 
